@@ -6,7 +6,8 @@ flatpak package for bajoja's indicator-kdeconnect (https://github.com/Bajoja/ind
 
  · add settings desktop file to export files. <br>
  · add "dev" branch .json. <br>
- · test with org.kde.kdeconnect flatpak
+ · <del>test with org.kde.kdeconnect flatpak.</del> (run) <br>
+ · make dbus run the indicator(see, #1).
 
 # How test #
 
@@ -20,10 +21,12 @@ $ sudo apt install flatpak
 See http://flatpak.org/getting.html for installations methods for others distros.
  
 #
+
 For now, if you wanna test this flatpak you need compile it from flatpak-builder with this commands, 
 inside of this directory run:
 ```
-$ flatpak-builder --repo=repo indicator-kdeconnect com.github.bajoja.indicator-kdeconnect.json
+$ flatpak-builder --repo=~/repo indicator-kdeconnect com.github.bajoja.indicator-kdeconnect.json
+$ flatpak remote-add --no-gpg-verify repo ~/repo
 $ flatpak install repo com.github.bajoja.indicator-kdeconnect.json
 ```
 and for execute, run:
