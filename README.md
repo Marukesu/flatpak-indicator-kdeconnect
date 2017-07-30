@@ -4,7 +4,7 @@ flatpak package for bajoja's [indicator-kdeconnect](https://github.com/Bajoja/in
 
 # Todos #
 
- · add settings desktop file to export files. <br>
+ · run indicator-kdeconnect-settings(see, [#2](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/2)). <br>
  · add "dev" branch .json. <br>
  · <del>test with org.kde.kdeconnect flatpak.</del> (run) <br>
  · make dbus run the indicator(see, [#1](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/1)).
