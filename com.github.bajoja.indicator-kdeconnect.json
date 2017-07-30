@@ -7,6 +7,7 @@
   "desktop-file-name-prefix": "(Nightly) ",
   "tags": ["nightly"],
   "command": "indicator-kdeconnect",
+  "rename-desktop-file": "indicator-kdeconnect.desktop",
   "finish-args": [
     /* only acess the home dir */
     "--filesystem=home",
@@ -16,7 +17,8 @@
     "--share=network",
     "--device=dri",
     /* Dbus connections */
-    "--talk-name=com.canonical.indicator.application",
+    "--env=XDG_CURRENT_DESKTOP=Unity",
+    "--talk-name=org.kde.StatusNotifierWatcher",
     "--talk-name=org.kde.kdeconnect",
     "--talk-name=org.freedesktop.DBus",
     "--talk-name=org.freedesktop.Notifications",
@@ -24,7 +26,7 @@
     "--filesystem=xdg-run/dconf",
     "--filesystem=~/.config/dconf:ro",
     "--talk-name=ca.desrt.dconf",
-    "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+    "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "modules": [
     {

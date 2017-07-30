@@ -29,7 +29,7 @@
  
  		public SettingsDialog () {
 -			Object (application_id: "com.bajoja.indicator-kdeconnect-settings",
-+			Object (application_id: "com.github.bajoja.indicator-kdeconnect-settings",
++			Object (application_id: "com.github.bajoja.indicator-kdeconnect",
  				flags: ApplicationFlags.FLAGS_NONE);
  		}
  
