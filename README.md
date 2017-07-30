@@ -1,0 +1,32 @@
+# flatpak-indicator-kdeconnect #
+
+flatpak package for bajoja's indicator-kdeconnect (https://github.com/Bajoja/indicator-kdeconnect).
+
+# Todos #
+
+ · add settings desktop file to export files. <br>
+ · add "dev" branch .json. <br>
+ · test with org.kde.kdeconnect flatpak
+
+# How test #
+
+Firstly you need flatpak and flatpak-builder installed in you computer. 
+for ubuntu-based disto, her is installed with this command:
+```
+$ sudo add-apt-repository ppa:alexlarsson/flatpak
+$ sudo apt update
+$ sudo apt install flatpak
+```
+See http://flatpak.org/getting.html for installations methods for others distros.
+ 
+#
+For now, if you wanna test this flatpak you need compile it from flatpak-builder with this commands, 
+inside of this directory run:
+```
+$ flatpak-builder --repo=repo indicator-kdeconnect com.github.bajoja.indicator-kdeconnect.json
+$ flatpak install repo com.github.bajoja.indicator-kdeconnect.json
+```
+and for execute, run:
+```
+$ flatpak run com.github.bajoja.indicator-kdeconnect
+```
