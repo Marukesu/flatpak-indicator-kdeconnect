@@ -1,0 +1,41 @@
+--- indicator-kdeconnect/src/main.vala	2017-07-29 02:53:53.492812341 -0300
++++ indicator-kdeconnect/src/main.vala	2017-07-29 13:28:17.784019292 -0300
+@@ -12,7 +12,7 @@
+         private FirstTimeWizard ftw;
+ 
+         public Application () {
+-            Object (application_id: "com.bajoja.indicator-kdeconnect",
++            Object (application_id: "com.github.bajoja.indicator-kdeconnect",
+                     flags: ApplicationFlags.FLAGS_NONE);
+ 
+         }
+          
+--- indicator-kdeconnect/src/StartupManager.vala	2017-07-29 13:59:59.751564867 -0300
++++ indicator-kdeconnect/src/StartupManager.vala	2017-07-29 14:00:59.863372685 -0300
+@@ -5,7 +5,7 @@
+  */
+ namespace KDEConnectIndicator {
+     public class StartupManager {
+-        private const string desktop_file = "indicator-kdeconnect.desktop";
++        private const string desktop_file = "com.github.bajoja.indicator-kdeconnect.desktop";
+         private string prefix_dir;
+         private string autostart_folder;
+         private File startup_file;
+         
+--- indicator-kdeconnect/src/settings/Settings.vala	2017-07-29 02:53:53.492812341 -0300
++++ indicator-kdeconnect/src/settings/Settings.vala	2017-07-29 14:27:26.702453963 -0300
+@@ -22,12 +22,12 @@
+ 
+ 
+ 		public SettingsDialog () {
+-			Object (application_id: "com.bajoja.indicator-kdeconnect-settings",
++			Object (application_id: "com.github.bajoja.indicator-kdeconnect-settings",
+ 				flags: ApplicationFlags.FLAGS_NONE);
+ 		}
+ 
+ 		protected override void activate () {
+-			this.settings = new GLib.Settings("com.bajoja.indicator-kdeconnect");
++			this.settings = new GLib.Settings("com.github.bajoja.indicator-kdeconnect");
+ 			create_window ();
+ 		}
+ 
