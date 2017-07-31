@@ -2,12 +2,18 @@
 
 flatpak package for bajoja's [indicator-kdeconnect](https://github.com/Bajoja/indicator-kdeconnect).
 
+for now it's don't send sms, files or browser the devices 
+but you can see the device notifications, battery and uses the "find my phone" options.
+
 # Todos #
 
- · run indicator-kdeconnect-settings(see, [#2](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/2)). <br>
+ · <del>run indicator-kdeconnect-settings(see, [#2](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/2)).</del> <br>
  · add "dev" branch .json. <br>
  · <del>test with org.kde.kdeconnect flatpak.</del> (run) <br>
- · make dbus run the indicator(see, [#1](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/1)).
+ · <del>make dbus run the indicator(see, [#1](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/1)).</del> <br>
+ · exports the indicator icons(see, [3](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/3)). <br>
+ · add python to depedences (needed for sms.py).
+ 
 
 # How test #
 
@@ -29,7 +35,12 @@ $ flatpak-builder --repo=~/repo indicator-kdeconnect com.github.bajoja.indicator
 $ flatpak remote-add --no-gpg-verify repo ~/repo
 $ flatpak install repo com.github.bajoja.indicator-kdeconnect.json
 ```
-and for execute, run:
+for execute, run:
 ```
 $ flatpak run com.github.bajoja.indicator-kdeconnect
 ```
+and
+```
+$ flatpak run --command=indicator-kdeconnect-settings com.github.bajoja.indicator-kdeconnect
+```
+if you wanna run the settings from terminal
