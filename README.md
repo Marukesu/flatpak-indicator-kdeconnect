@@ -11,8 +11,8 @@ but you can see the device notifications, battery and uses the "find my phone" o
  · add "dev" branch .json. <br>
  · <del>test with org.kde.kdeconnect flatpak.</del> (run) <br>
  · <del>make dbus run the indicator(see, [#1](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/1)).</del> <br>
- · exports the indicator icons(see, [3](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/3)). <br>
- · add python to depedences (needed for sms.py).
+ · <del>exports the indicator icons(see, [#3](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/3)).</del> <br>
+ · add python to depedences? (see, [#4](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/4)).
  
 
 # How test #
