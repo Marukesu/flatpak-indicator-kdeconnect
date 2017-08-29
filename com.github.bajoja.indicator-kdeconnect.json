@@ -20,6 +20,7 @@
     /* Dbus connections */
     "--own-name=com.github.bajoja.indicator-kdeconnect.settings",
     "--talk-name=org.kde.kdeconnect",
+    "--talk-name=org.kde.kdeconnectd",
     "--talk-name=org.kde.StatusNotifierWatcher",
     "--talk-name=org.freedesktop.DBus.Proprieties",
     "--talk-name=org.freedesktop.IBus",
@@ -85,6 +86,48 @@
       ]
     },
     {
+      "name": "python-requests",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --prefix=/app requests-2.14.2-py2.py3-none-any.whl"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://pypi.python.org/packages/e4/b0/286e8a936158e5cc5791d5fa3bc4b1d5a7e1ff4e5b3f3766b63d8e97708a/requests-2.14.2-py2.py3-none-any.whl#md5=a1b2f02e7ba45dff7c76f621cde042c4",
+          "sha256": "3b39cde35be51762885631cf586f4dc2284951b44d479a4454020758d767cc2f"
+        }
+      ]
+    },
+    {
+      "name": "python-oauthlib",
+      "buildsystem": "simple",
+      "build-commands": [
+        "python3 setup.py install --prefix=/app --root=/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://pypi.python.org/packages/fa/2e/25f25e6c69d97cf921f0a8f7d520e0ef336dd3deca0142c0b634b0236a90/oauthlib-2.0.2.tar.gz#md5=f59b448a30684347e00f369bc3542abc",
+          "sha256": "b3b9b47f2a263fe249b5b48c4e25a5bce882ff20a0ac34d553ce43cff55b53ac"
+        }
+      ]
+    },
+    {
+      "name": "python-request_oauthlib",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --prefix=/app requests_oauthlib-0.8.0-py2.py3-none-any.whl"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://pypi.python.org/packages/77/34/d0957563f20b259a31c12f14e858d79f2e66eb539d3c1b9ab7077ef030ca/requests_oauthlib-0.8.0-py2.py3-none-any.whl#md5=3dd6a56cde1e4b86cbdec252b95efd8c",
+          "sha256": "50a8ae2ce8273e384895972b56193c7409601a66d4975774c60c2aed869639ca"
+        }
+      ]
+    },
+    {
       "name": "indicator-kdeconnect",
       "buildsystem": "cmake",
       "build-options": {
@@ -113,8 +156,16 @@
       "buildsystem": "simple",
       "build-commands": [
         "install -dm755 /app/share/icons/hicolor",
+        "install -dm755 /app/share/icons/Adwaita",
+        "install -dm755 /app/share/icons/elementary",
+        "install -dm755 /app/share/icons/ubuntu-mono-light",
+        "install -dm755 /app/share/icons/ubuntu-mono-dark",
         "tar -xf icons.tar.gz",
-        "cp -aL hicolor/* /app/share/icons/hicolor"
+        "cp -aL hicolor/* /app/share/icons/hicolor",
+        "cp -aL Adwaita/* /app/share/icons/Adwaita",
+        "cp -aL elementary/* /app/share/icons/elementary",
+        "cp -aL ubuntu-mono-light/* /app/share/icons/ubuntu-mono-light",
+        "cp -aL ubuntu-mono-dark/* /app/share/icons/ubuntu-mono-dark"
       ],
       "sources": [
         {
