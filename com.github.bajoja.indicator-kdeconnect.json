@@ -4,7 +4,7 @@
   "runtime": "org.gnome.Platform",
   "runtime-version": "3.24",
   "sdk": "org.gnome.Sdk",
-  "desktop-file-name-prefix": "(Nightly) ",
+  "desktop-file-name-prefix": "(Test) ",
   "tags": ["nightly"],
   "command": "indicator-kdeconnect",
   "rename-icon": "kdeconnect",

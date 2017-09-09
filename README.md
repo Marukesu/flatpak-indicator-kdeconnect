@@ -2,13 +2,13 @@
 
 flatpak package for bajoja's [indicator-kdeconnect](https://github.com/Bajoja/indicator-kdeconnect).
 
-for now it's don't send sms, files or browser the devices 
-but you can see the device notifications, battery and uses the "find my phone" options.
+for now it's don't send files(org.kde.kdeconnect flatpak only) or browser the devices 
+but you can see the device notifications, battery, uses "find my phone" and "send sms" options.
 
 # Todos #
 
  · <del>run indicator-kdeconnect-settings(see, [#2](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/2)).</del> <br>
- · add "dev" branch .json. <br>
+ · make this a nightly .json and make a new stable .json. <br>
  · <del>test with org.kde.kdeconnect flatpak.</del> (run) <br>
  · <del>make dbus run the indicator(see, [#1](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/1)).</del> <br>
  · <del>exports the indicator icons(see, [#3](https://github.com/MrMarukesu/flatpak-indicator-kdeconnect/issues/3)).</del> <br>
