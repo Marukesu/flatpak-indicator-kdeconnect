@@ -1,9 +1,12 @@
 # flatpak-indicator-kdeconnect #
 
+
 flatpak package for bajoja's [indicator-kdeconnect](https://github.com/Bajoja/indicator-kdeconnect).
 
 for now it's don't send files(org.kde.kdeconnect flatpak only) or browser the devices 
 but you can see the device notifications, battery, uses "find my phone" and "send sms" options.
+
+## this is a old repo, use the [flathub instead!](https://beta.flathub.org/apps/details/com.github.bajoja.indicator-kdeconnect). ##
 
 # Todos #
 
